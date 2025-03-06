@@ -42,18 +42,6 @@ const members = [
     bio: "Specializes in full-stack development and cloud solutions.",
     avatar: "/images/helen.jpg",
   },
-  {
-    name: "Jane Smith",
-    role: "Talent Manager",
-    bio: "Expert in Agile methodologies and cross-functional team leadership.",
-    avatar: "/images/Gani.jpg",
-  },
-  {
-    name: "Alice Johnson",
-    role: "UI/UX Designer",
-    bio: "Focuses on creating user-friendly and visually appealing designs.",
-    avatar: "/images/phil.jpg",
-  },
 ];
 
 // Main component to render the team scroll display
