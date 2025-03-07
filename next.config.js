@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cdn.sanity.io", // Example; replace with your actual hostname
+        hostname: "hyperscript.ng", // 
         port: "",
       },
     ],
