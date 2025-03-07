@@ -236,9 +236,9 @@ const Footer = () => {
             </div>
 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
-              <Flip right>
+              <Flip >
                 <div className="footerRightBottomR">
-                  <img src="/images/wa.png" alt="" className="footerQR" />
+                  <Image src="/images/wa.png" alt="qr" width={400} height={400} />
                 </div>
               </Flip>
             </div>

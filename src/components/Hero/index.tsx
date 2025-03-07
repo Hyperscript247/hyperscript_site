@@ -22,16 +22,16 @@ const Hero = () => {
                   Employee Outsourcing, and Corporate Training Solutions. 
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Zoom direction="right" >
+                  <Zoom>
                   <Link
                     href="/#contact"
                     className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    Contact Us->
+                    Contact Us →
                   </Link>
                   </Zoom>
 
-                  <Zoom direction="left" >
+                  <Zoom>
                   <Link
                     href="#features"
                     className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"

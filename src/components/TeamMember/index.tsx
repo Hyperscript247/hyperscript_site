@@ -21,30 +21,30 @@ const members = [
   {
     name: "Micheal Soetan",
     role: "CEO",
-    bio: "Specializes in Full-stack development Project Management and Data Science.",
+    bio: "Expert in Agile methodologies and cross-functional team leadership.",
     avatar: "/images/ceo.jpg",
   },
   {
     name: "Ibukun Alao",
     role: "Operations Head",
-    bio: "Expert in Agile methodologies and cross-functional team leadership.",
+    bio: "Specialized isn cross-functional Sales and Clients Support.",
     avatar: "/images/ibk2.jpg",
   },
   {
     name: "Emmanuel Emaku",
     role: "HR Officer",
-    bio: "Focuses on creating user-friendly and visually appealing designs.",
+    bio: "People and Talent Management Expert ",
     avatar: "/images/emma.jpg",
   },
   {
     name: "Helen Arowobusoye",
     role: "Digital Content Creator",
-    bio: "Specializes in full-stack development and cloud solutions.",
+    bio: "Specializes in Strategic Marketing and Branding.",
     avatar: "/images/helen.jpg",
   },
 ];
 
 // Main component to render the team scroll display
 export default function TeamDisplay() {
-  return <TeamScroll members={members} />;
+  return <TeamScroll members={members} theme="light" />;
 }

@@ -1,7 +1,17 @@
+export type Submenu = {
+  id: number;
+  path: string;
+  title: string;
+  newTab: boolean;
+};
+
 export type Menu = {
   id: number;
+  path: string;
   title: string;
-  path?: string;
   newTab: boolean;
-  submenu?: Menu[];
+  submenu?: Submenu[]; // Optional submenu
 };
+
+// Ensure at least one export to be recognized as a module
+export {};

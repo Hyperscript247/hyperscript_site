@@ -1,34 +1,42 @@
 {
   "compilerOptions": {
+    "target": "es5", // Use "es5" for broader browser compatibility
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
+    ], // Correct and sufficient
+    "allowJs": true, // Allow JavaScript files (useful for mixed JS/TS projects)
+    "skipLibCheck": true, // Skip library checks to speed up compilation
+    "strict": true, // Enable strict type-checking (recommended for TypeScript)
+    "noEmit": true, // Next.js handles emitting files, so this is correct
+    "incremental": true, // Enable incremental compilation for faster builds
+    "module": "esnext", // Use ES modules for modern JavaScript
+    "esModuleInterop": true, // Enable ES module interoperability
+    "moduleResolution": "node", // Use Node.js-style module resolution
+    "resolveJsonModule": true, // Allow importing JSON files
+    "isolatedModules": true, // Ensure safe transpilation for isolated modules
+    "jsx": "preserve", // Preserve JSX for Next.js
+    "baseUrl": ".", // Enable path aliases (optional but recommended)
+    "paths": {
+      "@/*": [
+        "./*"
+      ] // Example path alias (adjust as needed)
+    },
     "plugins": [
       {
-        "name": "next"
+        "name": "next" // Next.js TypeScript plugin (correct)
       }
     ]
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
+    "**/*.ts", // Include Next.js type definitions
+    "**/*.tsx", // Include all TypeScript files
+    "next-env.d.ts" // Include all TypeScript JSX files
+    ,
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules" // Exclude node_modules from compilation
   ]
 }

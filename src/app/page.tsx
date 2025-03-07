@@ -9,12 +9,11 @@ import Hero from "../components/Hero";
 import TeamMember from "../components/TeamMember";
 import Testimonials from "../components/Testimonials";
 import Video from "../components/Video";
-import Programs from "../components/Programs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "Hyperscrip",
+  description: "A place of innovative tech solution",
   // other metadata
 };
 
@@ -25,7 +24,6 @@ export default function Home() {
       <Hero />
       <Features />
       <Video />
-      
       <AboutSectionOne />
       <AboutSectionTwo />
       <Brands />

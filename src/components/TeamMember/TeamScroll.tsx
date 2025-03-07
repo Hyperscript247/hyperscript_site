@@ -6,42 +6,55 @@ import TeamMember from "./TeamMember";
 import SectionTitle from "../Common/SectionTitle";
 import { Fade } from "react-awesome-reveal";
 
-const TeamScroll = ({ members, theme }) => {
-  const carouselRef = useRef(null);
+interface TeamMemberType {
+  name: string;
+  role: string;
+  bio: string;
+  avatar: string;
+}
+
+interface TeamScrollProps {
+  members: TeamMemberType[];
+  theme?: string;
+}
+
+const TeamScroll: React.FC<TeamScrollProps> = ({ members, theme }) => {
+  const carouselRef = useRef<HTMLDivElement | null>(null);
   const isUserInteracting = useRef(false); // Tracks if the user is interacting
-  const interactionTimeout = useRef(null); // Timeout for resuming auto-scroll
+  const interactionTimeout = useRef<NodeJS.Timeout | null>(null); // Timeout for resuming auto-scroll
 
   useEffect(() => {
-    if (!carouselRef.current) return;
-
     const carousel = carouselRef.current;
     if (!carousel) return;
 
-    const duplicateCourses = () => {
-      // Duplicate content to create an infinite loop effect
-      if (carousel.children.length < 2) {
-        carousel.innerHTML += carousel.innerHTML;
+    // Duplicate items for smooth infinite scrolling (without modifying innerHTML)
+    const duplicateMembers = () => {
+      if (carousel.children.length < members.length * 2) {
+        members.forEach((member) => {
+          const clone = document.createElement("div");
+          clone.innerHTML = carousel.children[0]?.innerHTML || "";
+          carousel.appendChild(clone);
+        });
       }
     };
 
-    duplicateCourses();
+    duplicateMembers();
 
     const scrollInterval = setInterval(() => {
+      if (!carouselRef.current || isUserInteracting.current) return;
+
       const maxScrollLeft =
         carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+
       if (carouselRef.current.scrollLeft >= maxScrollLeft) {
         carouselRef.current.scrollTo({ left: 0, behavior: "smooth" });
       } else {
-        carouselRef.current.scrollBy({ left: 2, behavior: "smooth" });
-
-        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
-          carousel.scrollTo({ left: 0, behavior: "instant" });
-        }
+        carouselRef.current.scrollBy({ left: 1, behavior: "smooth" });
       }
     }, 50);
 
     return () => clearInterval(scrollInterval);
-  }, []);
+  }, [members]);
 
   const handleUserInteraction = () => {
     isUserInteracting.current = true;
@@ -49,7 +62,7 @@ const TeamScroll = ({ members, theme }) => {
     // Clear any existing timeout
     if (interactionTimeout.current) clearTimeout(interactionTimeout.current);
 
-    // Resume auto-scroll after a 2-second delay
+    // Resume auto-scroll after a delay
     interactionTimeout.current = setTimeout(() => {
       isUserInteracting.current = false;
     }, 2000);
@@ -130,7 +143,7 @@ const TeamScroll = ({ members, theme }) => {
 
       {/* Carousel */}
       <div className="carousel-container m-5">
-        <div className="carousel" ref={carouselRef}>
+        <div className="carousel flex" ref={carouselRef}>
           {members.concat(members).map((member, index) => (
             <TeamMember
               key={index}

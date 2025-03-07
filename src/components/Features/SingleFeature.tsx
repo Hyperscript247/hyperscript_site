@@ -1,4 +1,4 @@
-import { Feature } from "@/types/feature";
+import { Feature } from "../../types/feature";
 import { Fade, Reveal, Flip } from "react-awesome-reveal";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {

@@ -6,26 +6,33 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement | null>(null);
   // const [done, setDone] = useState(false);
 
-  const sendEmail = (e) => {
+  
+  
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_f58sgyf", "template_pv2id5n", e.target, {
+      .sendForm(
+        "service_f58sgyf", 
+        "template_pv2id5n", 
+        e.currentTarget, 
+        {
         publicKey: "0uyq2X_-JcvzHkeFc",
-      })
+      }
+      )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("Email sent successfully:", result.text);
         },
         (error) => {
-          console.log(error.text);
-        },
+          console.error("Email sending failed:", error.text);
+        }
       );
-    e.target.reset();
   };
+
 
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
@@ -35,8 +42,7 @@ const Contact = () => {
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div
               className="mb-12 rounded-sm bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
-              data-wow-delay=".15s
-              "
+              data-wow-delay=".15s"
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 Speak With One of Us!
