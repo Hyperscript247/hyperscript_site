@@ -9,19 +9,19 @@ const Hero = () => {
         className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] min-h-screen"
       >
       
-        <div className="container">
+        <div className="container mt-[100px]">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
             <Fade >
-              <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Empowering businesses and individuals through innovative data solutions, software development skill-building, and workforce enhancement.
+              <div className="mx-auto max-w-[900px] text-center mt-auto">
+                <h1 className="mb-5 text-3xl font-bold leading-tight  text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                 Empowering businesses with innovative data solutions, skill-building, and workforce enhancement.
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                   Our expertise spans Data Analytics and Business Intelligence, specialized Training Programs, 
                   Employee Outsourcing, and Corporate Training Solutions. 
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-2">
                   <Zoom>
                   <Link
                     href="/#contact"
@@ -46,7 +46,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100 bounce-animation">
           <svg
             width="450"
             height="556"
@@ -184,7 +184,7 @@ const Hero = () => {
             </defs>
           </svg>
         </div>
-        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
+        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100 bounce-animation">
           <svg
             width="364"
             height="201"

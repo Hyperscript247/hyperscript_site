@@ -237,8 +237,8 @@ const Footer = () => {
 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <Flip >
-                <div className="footerRightBottomR">
-                  <Image src="/images/wa.png" alt="qr" width={400} height={400} />
+               <div className="footerRightBottomR flex justify-center items-center text-center mx-auto w-full max-w-[370px] rounded-lg bg-[#F9FAFB] p-8 shadow-lg dark:bg-gray-800">
+                  <Image src="/images/wa.png" alt="qr" width={300} height={300} />
                 </div>
               </Flip>
             </div>
