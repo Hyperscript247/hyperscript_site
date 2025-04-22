@@ -1,6 +1,7 @@
+import Breadcrumb from "../../components/Common/Breadcrumb";
 import AboutSectionOne from "../../components/About/AboutSectionOne";
 import AboutSectionTwo from "../../components/About/AboutSectionTwo";
-import Breadcrumb from "../../components/Common/Breadcrumb";
+import AboutUs from "../../components/AboutUs";
 
 import { Metadata } from "next";
 
@@ -14,9 +15,10 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="About Us"
+        description="Discover how Hyperscript is transforming businesses through innovative technology solutions, expert training, and data-driven insights."
       />
+      <AboutUs />
       <AboutSectionOne />
       <AboutSectionTwo />
     </>

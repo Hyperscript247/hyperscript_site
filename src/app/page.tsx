@@ -1,20 +1,17 @@
-import AboutSectionOne from "../components/About/AboutSectionOne";
-import AboutSectionTwo from "../components/About/AboutSectionTwo";
-import Blog from "../components/Blog";
-import Brands from "../components/Brands";
-import ScrollUp from "../components/Common/ScrollUp";
-import Contact from "../components/Contact";
-import Features from "../components/Features";
 import Hero from "../components/Hero";
-import TeamMember from "../components/TeamMember";
-import Testimonials from "../components/Testimonials";
-import Video from "../components/Video";
+import Features from "../components/Features";
+import ServiceShowcase from "../components/ServiceShowcase";
+import WhyChooseUs from "../components/WhyChooseUs";
+import SuccessStories from "../components/SuccessStories";
+import CallToAction from "../components/CallToAction";
+import FAQ from "../components/FAQ";
+import Contact from "../components/Contact";
+import ScrollUp from "../components/Common/ScrollUp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hyperscrip",
-  description: "A place of innovative tech solution",
-  // other metadata
+  title: "Hyperscript - Data-Driven Solutions & Tech Innovation",
+  description: "Transform your business with our comprehensive suite of services including data analytics, software engineering, training, and talent outsourcing solutions.",
 };
 
 export default function Home() {
@@ -23,13 +20,11 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      <Video />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Brands />
-      <Testimonials />
-      <TeamMember />
-      <Blog />
+      <ServiceShowcase />
+      <WhyChooseUs />
+      <SuccessStories />
+      <CallToAction />
+      <FAQ />
       <Contact />
     </>
   );

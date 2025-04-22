@@ -16,13 +16,13 @@ const AboutSectionTwo = () => {
                   src="/images/About3.png"
                   alt="about image"
                   fill
-                  className="drop-shadow-three dark:hidden dark:drop-shadow-none"
+                  className="rounded-lg object-cover drop-shadow-three dark:hidden dark:drop-shadow-none"
                 />
                 <Image
                   src="/images/About3.png"
                   alt="about image"
                   fill
-                  className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
+                  className="hidden rounded-lg object-cover drop-shadow-three dark:block dark:drop-shadow-none"
                 />
               </div>
             </Slide>
@@ -44,7 +44,7 @@ const AboutSectionTwo = () => {
                 </div>
                 <div className="mb-9">
                   <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                    Structured Data System Enhance Insigt
+                    Structured Data System Enhance Insight
                   </h3>
                   <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
                     A well-organized data system allows businesses to extract
