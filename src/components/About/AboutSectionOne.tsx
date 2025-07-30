@@ -72,13 +72,13 @@ const AboutSectionOne = () => {
                     src="/images/about4.png"
                     alt="about-image"
                     fill
-                    className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                    className="mx-auto max-w-full rounded-lg object-cover drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                   />
                   <Image
                     src="/images/about4.png"
                     alt="about-image"
                     fill
-                    className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                    className="mx-auto hidden max-w-full rounded-lg object-cover drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                   />
                 </div>
               </Slide>
